@@ -1,0 +1,65 @@
+.topbar__full {
+    @apply w-full text-white text-xs
+    bg-[var(--secondary)]/95 backdrop-blur-md
+    border-b border-white/10
+    shadow-sm;
+}
+
+.topbar__full {
+    @apply w-full text-white text-xs
+    bg-[var(--secondary)]/95 backdrop-blur-md
+    border-b border-b-black
+    shadow-sm
+    mx-auto px-6 h-9
+    flex items-center justify-end
+    tracking-[0.08em]
+    gap-5;
+}
+
+.topbar__item {
+    @apply flex items-center gap-2
+    transition-all duration-500
+    hover:text-(--brand-green);
+}
+
+.topbar__icon {
+    @apply text-white/80 group-hover:text-(--brand-green) transition-all duration-300;
+}
+
+.topbar__right {
+    @apply flex items-center gap-3;
+}
+
+
+.navbar__full{
+    @apply sticky top-0 flex flex-row place-content-between w-full h-20
+    border-[var(--color-primary)]
+    shadow-lg items-center
+    border-b-4 bg-[#f9fafb] backdrop-blur-md px-8 z-20
+    transition-all duration-300;
+}
+.links__full{
+    @apply flex flex-row gap-8 text-[var(--primary)] font-medium;
+}
+
+.link__each {
+    position: relative;
+    @apply text-secondary hover:text-[var(--color-green-dark)] text-sm uppercase tracking-wide font-semibold transition duration-500;
+}
+
+.link__each::after{
+    content: '';
+    @apply absolute left-0 -bottom-[2px] w-0 h-[2px]
+    bg-gradient-to-r from-[var(--brand-blue)] to-[var(--brand-green)] transition-all duration-400;
+}
+
+.link__each:hover::after{
+    @apply w-full;
+}
+
+.button__full{
+    @apply bg-[var(--brand-green)] px-6 py-3 text-white font-bold text-sm uppercase tracking-wider
+    rounded-ss-2xl rounded-ee-2xl shadow-md
+    hover:bg-[var(--brand-green-dark)] hover:-translate-y-0.5
+    transition-all duration-300 ease-in-out active:scale-95;
+}

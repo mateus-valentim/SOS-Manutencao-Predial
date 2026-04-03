@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "./components/navbar/style.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  --brand-blue: #2563EB;
+  --brand-blue-darker: #1c3c87;
+  --brand-red: #E11D48;
+  --brand-green: #14ba51;
+  --brand-orange: #EA580C;
+  --brand-green-dark: #109943;
+
+  --primary: var(--brand-blue);
+  --secondary: var(--brand-blue-darker);
+
+  --accent-green: var(--brand-green);
+  --accent-orange: var(--brand-orange);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-logo: 'Poppins', sans-serif;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #E5E5E5;
+  --primary: #1DB954;
+  --secondary: #1ED760;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
+  --color-green: var(--accent-green);
+  --color-green-dark: var(--brand-green-dark);
+  --color-orange: var(--accent-orange);
+  --color-red: var(--brand-red);
+
+  --font-sans: var(--font-sans);
+  --font-logo: var(--font-logo);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
