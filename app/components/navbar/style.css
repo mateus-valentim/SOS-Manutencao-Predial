@@ -1,17 +1,11 @@
-.topbar__full {
-    @apply w-full text-white text-xs
-    bg-[var(--secondary)]/95 backdrop-blur-md
-    border-b border-white/10
-    shadow-sm;
-}
 
 .topbar__full {
-    @apply w-full text-white text-xs
+    @apply w-full text-white text-[11px] md:text-xs
     bg-[var(--secondary)]/95 backdrop-blur-md
     border-b border-b-black
-    shadow-sm
-    mx-auto px-6 h-9
-    flex items-center justify-end
+    shadow-xl
+    mx-auto px-6 h-[3vh] min-h-5
+    flex items-center justify-center md:justify-end
     tracking-[0.08em]
     gap-5;
 }
@@ -32,7 +26,7 @@
 
 
 .navbar__full{
-    @apply sticky top-0 flex flex-row place-content-between w-full h-20
+    @apply sticky top-0 flex flex-row place-content-between w-full h-[9vh] min-h-15 max-h-25
     border-[var(--color-primary)]
     shadow-lg items-center
     border-b-4 bg-[#f9fafb] backdrop-blur-md px-8 z-20
@@ -44,7 +38,7 @@
 
 .link__each {
     position: relative;
-    @apply text-secondary hover:text-[var(--color-green-dark)] text-sm uppercase tracking-wide font-semibold transition duration-500;
+    @apply text-secondary hover:text-[var(--color-green-dark)] text-[13px] [@media(min-width:1100px)]:text-sm hidden lg:block 2xl:text-base uppercase font-semibold transition duration-500;
 }
 
 .link__each::after{
@@ -58,7 +52,9 @@
 }
 
 .button__full{
-    @apply bg-[var(--brand-green)] px-6 py-3 text-white font-bold text-sm uppercase tracking-wider
+    @apply bg-[var(--brand-green)] hidden lg:block
+    px-5 [@media(min-width:1100px)]:px-6 py-3 text-white font-bold text-[13px] [@media(min-width:1100px)]:text-sm
+    uppercase tracking-wider
     rounded-ss-2xl rounded-ee-2xl shadow-md
     hover:bg-[var(--brand-green-dark)] hover:-translate-y-0.5
     transition-all duration-300 ease-in-out active:scale-95;

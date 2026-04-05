@@ -1,0 +1,3 @@
+.slider__full{
+    @apply w-[100vw] h-[60vh] relative overflow-hidden;
+}
