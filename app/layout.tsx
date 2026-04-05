@@ -43,13 +43,8 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${poppins.variable} h-full antialiased`}
         >
         <body className={`min-h-full flex flex-col `}>
-        <ThemeProvider
-            defaultTheme="light"
-            attribute="class"
-        >
 
             {children}
-        </ThemeProvider>
         </body>
         </html>
     );
